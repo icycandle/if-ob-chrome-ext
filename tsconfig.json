@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["*.ts"]
+    "target": "es2020",
+    "module": "es2020",
+    "strict": true
+  }
 }

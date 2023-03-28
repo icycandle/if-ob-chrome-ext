@@ -1,3 +1,5 @@
+import { sharedFunction } from './lib';
+
 document.addEventListener('DOMContentLoaded', () => {
   const hideButton = document.getElementById('hideButton') as HTMLButtonElement;
   if (hideButton) {
@@ -6,10 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tabs[0].id) {
           chrome.scripting.executeScript({
             target: { tabId: tabs[0].id },
-            files: ['content.js'],
+            files: ['dist/content.js'],
           });
         }
       });
     });
   }
+
+  sharedFunction();
 });
